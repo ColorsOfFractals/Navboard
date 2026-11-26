@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 145">
+  <circle cx="100" cy="72" r="60" fill="#e5a65c" opacity=".06"/>
+  <circle cx="100" cy="72" r="49" fill="#e5a65c" opacity=".07"/>
+  <defs>
+    <g id="synth">
+      <rect x="3" y="4" width="62" height="52" rx="6" fill="#0d141e"/>
+      <rect width="62" height="52" rx="6" fill="#303b48" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="8" y="8" width="45" height="6" rx="2" fill="currentColor" opacity=".7"/>
+      <circle cx="18" cy="30" r="9" fill="#18222e" stroke="currentColor" stroke-width="2"/>
+      <path d="M18 30 l4 -5" stroke="currentColor" stroke-width="2"/>
+      <circle cx="43" cy="30" r="6" fill="#18222e" stroke="currentColor"/>
+    </g>
+  </defs>
+  <path d="M77 40 C111 40 92 65 123 65"
+    fill="none" stroke="#67cbd8" stroke-width="3.5"/>
+  <path d="M77 105 C115 105 89 90 123 90"
+    fill="none" stroke="#a89ce8" stroke-width="3.5"/>
+  <use href="#synth" x="15" y="13" color="#67cbd8"/>
+  <use href="#synth" x="15" y="78" color="#a89ce8"/>
+  <use href="#synth" x="123" y="48" color="#e5a65c"/>
+  <g fill="#111923" stroke-width="2">
+    <circle cx="77" cy="40" r="4.5" stroke="#67cbd8"/>
+    <circle cx="77" cy="105" r="4.5" stroke="#a89ce8"/>
+    <circle cx="123" cy="65" r="4.5" stroke="#67cbd8"/>
+    <circle cx="123" cy="90" r="4.5" stroke="#a89ce8"/>
+  </g>
+  <path d="M177 14 v12 M171 20 h12 M24 119 v10 M19 124 h10"
+    stroke="#e5a65c" stroke-width="1.5" opacity=".6"/>
+</svg>

@@ -1,0 +1,26 @@
+[application]
+
+[web.app]
+
+# HTML title tag content
+title = "navboard"
+
+# include `assets` in web platform
+[web.resource]
+
+# Additional CSS style files
+style = []
+
+# Additional JavaScript files
+script = []
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []
+
+[bundle]
+identifier = "com.colorsoffractals.navboard"
+publisher = "ColorsOfFractals"
+icon = ["assets/Navboard_Icon.ico"]

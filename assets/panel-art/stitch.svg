@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 145">
+  <circle cx="100" cy="72" r="60" fill="#79c9a1" opacity=".06"/>
+  <circle cx="100" cy="72" r="49" fill="#79c9a1" opacity=".07"/>
+  <defs>
+    <g id="step">
+      <rect x="3" y="4" width="112" height="30" rx="6" fill="#0d141e"/>
+      <rect width="112" height="30" rx="6" fill="#294a3c" stroke="#79c9a1" stroke-width="1.5"/>
+      <circle cx="16" cy="15" r="9" fill="#79c9a1"/>
+      <path d="M34 10 H89 M34 19 H72" stroke="#b5dfc8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <path d="M34 30 C14 30 14 69 55 69 M167 69 C188 69 188 108 155 108"
+    fill="none" stroke="#79c9a1" stroke-width="2" stroke-dasharray="4 4"/>
+  <use href="#step" x="43" y="15"/>
+  <use href="#step" x="55" y="54"/>
+  <use href="#step" x="43" y="93"/>
+  <g fill="#183529" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
+    <text x="59" y="34">1</text>
+    <text x="71" y="73">2</text>
+    <text x="59" y="112">3</text>
+  </g>
+  <path d="M177 14 v12 M171 20 h12 M24 119 v10 M19 124 h10"
+    stroke="#79c9a1" stroke-width="1.5" opacity=".6"/>
+</svg>
