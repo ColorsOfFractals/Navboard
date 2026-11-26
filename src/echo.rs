@@ -38,7 +38,14 @@ fn resolve_runtime() -> Result<(PathBuf, PathBuf), String> {
         .ok_or("Cannot locate Navboard directory")?;
 
     let root = parent.join("echo-lab");
-    let python = root.join("runtime").join("python.exe");
+    let python = std::env::var_os("LOCALAPPDATA")
+        .map(PathBuf::from)
+        .ok_or("Cannot locate local application data")?
+        .join("Navboard")
+        .join("Echo")
+        .join("venv")
+        .join("Scripts")
+        .join("python.exe");
 
     if python.is_file() && root.join("echo_worker.py").is_file() {
         return Ok((root, python));
@@ -60,6 +67,6 @@ fn resolve_runtime() -> Result<(PathBuf, PathBuf), String> {
         }
     }
 
-    Err("Echo runtime unavailable. Repair or reinstall Navboard.".into())
+    Err("Echo setup required. Run Setup-Echo.ps1 in the installed echo-lab folder.".into())
 }
 

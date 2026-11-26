@@ -1,0 +1,17 @@
+NAVBOARD - THIRD-PARTY NOTICES
+
+Navboard is licensed under GPL-3.0-only.
+
+Rust dependencies retain their respective licenses.
+See Rust-Dependencies.csv and the Rust license directory
+for dependency identities and collected license texts.
+
+Echo's optional Python dependencies are downloaded directly
+from upstream using the supplied dependency lock.
+Python, PyAV, FFmpeg, x264, x265 and Python wheels are
+not included in the Navboard installer.
+
+Microsoft Edge WebView2 Runtime is a separate Microsoft
+component governed by its applicable distribution terms.
+
+Third-party components are not relicensed by Navboard.

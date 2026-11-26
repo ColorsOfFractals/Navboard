@@ -10,7 +10,7 @@ Navboard is a local-first Windows desktop composition environment built with Rus
 
 ## Getting started
 
-1. Install Navboard using the Seafoam setup executable from the repository's Releases section once published.
+1. Install Navboard using Navboard_0.1.0_x64-setup.exe from the repository's Releases section.
 2. Launch Navboard to enter Orbit.
 3. Choose an instrument to begin composing, or select the central orb to enter Worlds.
 4. Assign a finished piece to a World to keep it alongside related work, or export a Navboard Manifest where supported.
@@ -83,7 +83,7 @@ Echo uses a Python speech-recognition worker with local Faster Whisper inference
 
 **Example:** Transcribe your own spoken project notes while listening to a prerecorded tutorial.
 
-**Release limitation:** Echo's Python environment, audio dependencies and model provisioning have not been verified on a clean Windows installation. Echo may require separate setup.
+**Release limitation:** Echo's Python environment, audio dependencies and model provisioning have not been verified on a clean Windows installation. Echo requires the optional runtime setup described below. Dual-channel transcription was successfully tested after installation on the development machine.
 
 ### 8. Lens — organize imagery
 
@@ -128,10 +128,10 @@ Worlds are stored locally under `%LOCALAPPDATA%\Navboard`. Assigned World data c
 ## Installation and release status
 
 - Windows x64 desktop application using Microsoft Edge WebView2.
-- Install using the branded Seafoam setup executable attached to the private GitHub release once published.
+- Install using the Windows x64 setup executable attached to the GitHub release.
 - The release candidate passed 34 automated tests, all nine tray instrument launch checks, tray Exit testing and an installed-application smoke test on the development machine.
 - Clean-machine installation and Echo dependency provisioning have not been independently verified.
-- Installer code signing has not been verified.
+- The installer is unsigned. Windows SmartScreen may display a warning. Verify the supplied SHA256 checksum before installation.
 - The protected-session tray warning can cause minor clipping of the disabled Exit button.
 
 ## Development
@@ -154,3 +154,43 @@ The offline test command assumes dependencies are already cached. A fresh develo
 Orbit is universal. Worlds are contextual. Instruments are reusable. Pieces are transferable.
 
 Developed by **ColorsOfFractals**.
+
+
+## License
+
+Copyright (C) 2026 ColorsOfFractals.
+
+Navboard is free and open-source software licensed under
+the GNU General Public License, version 3.0 (GPL-3.0-only).
+
+You are free to use, study, modify, and redistribute Navboard
+under the terms of the GPL.
+
+See [LICENSE](LICENSE) for the complete license text.
+
+Third-party components retain their respective licenses.
+Navboard is provided without warranty.
+
+
+## Optional Echo Runtime Setup
+
+Navboard includes all nine instruments. Echo requires an optional
+Python 3.13 x64 environment for local speech recognition.
+
+1. Install Python 3.13 x64 from https://www.python.org/downloads/windows/
+   with the Python launcher enabled.
+2. Open the installed Navboard echo-lab directory.
+3. Review and run Setup-Echo.ps1 using PowerShell.
+4. Restart Navboard.
+
+Echo dependencies are obtained directly from PyPI using the supplied
+version and SHA256 lock. Python, Python wheels, FFmpeg codec binaries,
+and speech recognition model weights are not bundled in this installer.
+
+The recognition model downloads separately on first use.
+Other instruments do not require the Echo runtime.
+
+Echo runtime storage:
+%LOCALAPPDATA%\Navboard\Echo
+
+Third-party dependencies retain their respective licenses.
